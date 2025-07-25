@@ -474,6 +474,9 @@ def desafio(palos,horasjugadas,salud,saludmaxima,lanza,usoslanza,hacha,usoshacha
         if fogata==1:
             print("te quedaste alimentando a tu fogata para que se mantenga viva un poco mas","\n","lograste que sibreviva, pero igual se redujo mucho")
             horasfogata=horasfogata-2
+            if horasfogata==0:
+                print("la fogata se ha apagado","\n")
+                fogata=0
             palos=palos-5
             if palos<0:
                 palos=0
