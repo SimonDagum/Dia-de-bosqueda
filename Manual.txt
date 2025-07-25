@@ -1,0 +1,16 @@
+Para jugar:
+Ejecutar en python
+Escriba todo tal cual se le da de opción por favor, si no habra consecuencias
+Este proyecto fue hecho en unas semanas con no mucho tiempo
+Construcciones:
+Hacha: 2 piedras, 1 palo, 2 lianas
+Lanza: 1 piedra, 2 palos, 2 lianas
+fogata: 8 piedras, 5 palos
+refugio: 10 palos, 20 hojas
+Utilidades:
+Los frutos sirven para recuperar salud
+La fogata para el frio
+El hacha para conseguir recursos mas facilmente
+La bengala te sirve para ahuyentar enemigos
+La lanza y la navaja son puramente para atacar
+disfrute del juego \(^-^)/
