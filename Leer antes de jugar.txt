@@ -1,0 +1,5 @@
+Para jugar:
+Ejecutar en python
+Escriba todo tal cual se le da de opción por favor
+Este proyecto fue hecho en unas semanas con no mucho tiempo
+disfrute del juego \(^-^)/
