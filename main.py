@@ -63,7 +63,7 @@ while horasjugadas!=horas and salud>0:
      if hacha==1:
       print("tienes un hacha","\n")
      print("tienes",salud,"de salud","\n")
-     funciones.eventocomun(palos,piedras,navaja,bengala,lianas,frutos,hojas,lanza,hacha,fogata,refugio,horasfogata,usoslanza,usoshacha,usosnavaja,salud,saludmaxima)
+     funciones.eventocomun(palos,piedras,navaja,bengala,lianas,frutos,hojas,lanza,hacha,fogata,refugio,horasfogata,usoslanza,usoshacha,usosnavaja,salud,saludmaxima,lesion,efectolesion)
      if aux%5==0:
       funciones.desafio(salud,saludmaxima,lanza,usoslanza,hacha,usoshacha,fogata,horasfogata,bengala,navaja,usosnavaja,lesion,efectolesion)
      if horasjugadas>55:
