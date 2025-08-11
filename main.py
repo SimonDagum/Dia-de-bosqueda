@@ -186,7 +186,7 @@ while horasjugadas!=horas and salud>0:
             if posiblenavaja>18:
                 print(" Perfecto, una navaja")
                 navaja=1
-                usosnavaja==7
+                usosnavaja=7
      else:
          print(" Decidiste quedarte viendo por una hora")
      if aux%5==0:
@@ -467,3 +467,4 @@ elif salud<=0:
     print(" Usted ha muerto")
 else:
     print(" A duras penas llegaste al final, los rescatistas te salvaron de la muerte por milesimas")
+
