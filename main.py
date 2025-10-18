@@ -1,45 +1,53 @@
 import random
 import funciones
-print("Bienvenido a Dia de Bosqueda","\n","seleccione la dificultad","\n","facil, 13 horas","\n","normal, 26 horas","\n","dificil, 52 horas","\n","supervivencia, hasta donde puedas")
-respuesta=input()
-respuesta=respuesta.lower()
-while respuesta!="facil" and respuesta!="normal" and respuesta!="dificil" and respuesta!="supervivencia":
-  print("")
-if respuesta=="facil":
+print("Bienvenido a Dia de Bosqueda")
+jugar=1
+while jugar>0:
+ eleccion=input(" ¿Que quieres hacer?","\n"," -Jugar","\n"," -Ver instrucciones","\n"," -Salir")
+ eleccion=eleccion.lower()
+ while eleccion!="jugar" and eleccion!="ver instrucciones" and eleccion!="salir":
+     print("")
+ if eleccion=="jugar":
+  print("seleccione la dificultad","\n","facil, 13 horas","\n","normal, 26 horas","\n","dificil, 52 horas","\n","supervivencia, hasta donde puedas")
+  respuesta=input()
+  respuesta=respuesta.lower()
+  while respuesta!="facil" and respuesta!="normal" and respuesta!="dificil" and respuesta!="supervivencia":
+   print("")
+  if respuesta=="facil":
      print(" Te has perdido en el bosque, estas con poca bateria","\n","tu amigo dijo que vendrian por ti en 13 horas")
      horas=13
-elif respuesta=="normal":
+  elif respuesta=="normal":
      print(" Te has perdido en el bosque, estas con poca bateria","\n","tu amigo dijo que vendrian por ti en 26 horas")
      horas=26
-elif respuesta=="dificil":
+  elif respuesta=="dificil":
      print(" Te has perdido en el bosque, estas con poca bateria","\n","tu amigo dijo que vendrian por ti en 52 horas")
      horas=52
-elif respuesta=="supervivencia":
+  elif respuesta=="supervivencia":
      print(" Te has perdido en el bosque, venias solo","\n","gritas por ayuda pero nadie viene","\n","sobrevive cuanto puedas")
      horas=0
-horasjugadas=1
-piedras=0
-palos=0
-lianas=0
-navaja=0
-usosnavaja=0
-bengala=0
-frutos=0
-hojas=0
-salud=100
-saludmaxima=100
-lanza=0
-usoslanza=0
-hacha=0
-usoshacha=0
-fogata=0
-horasfogata=0
-refugio=0
-lesion=0
-efectolesion=0
-aux=0
-suerte=0
-while horasjugadas!=horas and salud>0:
+  horasjugadas=1
+  piedras=0
+  palos=0
+  lianas=0
+  navaja=0
+  usosnavaja=0
+  bengala=0
+  frutos=0
+  hojas=0
+  salud=100
+  saludmaxima=100
+  lanza=0
+  usoslanza=0
+  hacha=0
+  usoshacha=0
+  fogata=0
+  horasfogata=0
+  refugio=0
+  lesion=0
+  efectolesion=0
+  aux=0
+  suerte=0
+  while horasjugadas!=horas and salud>0:
      aux=horasjugadas
      print(" Hora numero",horasjugadas)
      if palos>0:
@@ -222,19 +230,19 @@ while horasjugadas!=horas and salud>0:
                     respuesta=input()
                     respuesta=respuesta.lower()
                     if respuesta=="lanza" and lanza==1:
-                        funciones.ataquelanza(lanza,usoslanza)
+                        funciones.ataquelanza(lanza=lanza,usoslanza=usoslanza)
                     elif respuesta=="hacha" and hacha==1:
-                        funciones.ataquehacha(hacha,usoshacha)
+                        funciones.ataquehacha(hacha=hacha,usoshacha=usoshacha)
                     elif respuesta=="navaja" and navaja==1:
-                        funciones.ataquenavaja(navaja,usosnavaja)
+                        funciones.ataquenavaja(navaja=navaja,usosnavaja=usosnavaja)
                     elif respuesta=="bengala" and bengala==1:
-                        funciones.ahuyentar(bengala)
+                        funciones.ahuyentar(bengala=bengala)
                     else:
-                        funciones.dejarsemorir(salud,saludmaxima)
+                        funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
                     lesion=lesion+1
                     efectolesion=efectolesion+5
                 else:
-                    funciones.dejarsemorir(salud,saludmaxima)
+                    funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
         elif respuesta=="correr":
             print(" Haz huido del oso y")
             resultado=random.randint(1,20)
@@ -250,37 +258,39 @@ while horasjugadas!=horas and salud>0:
                         print(" -Lanza")
                     respuesta==input().lower()
                     if respuesta=="lanza" and lanza==1:
-                        funciones.ataquelanza(lanza,usoslanza)
+                        funciones.ataquelanza(lanza=lanza,usoslanza=usoslanza)
                     elif respuesta=="hacha" and hacha==1:
-                        funciones.ataquehacha(hacha,usoshacha)
+                        funciones.ataquehacha(hacha=hacha,usoshacha=usoshacha)
                     elif respuesta=="navaja" and navaja==1:
-                        funciones.ataquenavaja(navaja,usosnavaja)
+                        funciones.ataquenavaja(navaja=navaja,usosnavaja=usosnavaja)
                     else:
-                        funciones.dejarsemorir(salud,saludmaxima)
+                        funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
+                    lesion=lesion+1
+                    efectolesion=efectolesion+5
                 else:
-                    funciones.dejarsemorir(salud,saludmaxima)
+                    funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
         elif respuesta=="atacar con lanza":
             print(" Te pusiste su piel encima")
-            funciones.ataquelanza(lanza,usoslanza)
+            funciones.ataquelanza(lanza=lanza,usoslanza=usoslanza)
             if saludmaxima<150:
              saludmaxima=saludmaxima+50
              salud=saludmaxima
         elif respuesta=="atacar con hacha":
             print(" Te pusiste su piel encima")
-            funciones.ataquehacha(hacha,usoshacha)
+            funciones.ataquehacha(hacha=hacha,usoshacha=usoshacha)
             if saludmaxima<150:
              saludmaxima=saludmaxima+50
              salud=saludmaxima
         elif respuesta=="atacar con navaja":
             print(" Te pusiste su piel encima")
-            funciones.ataquenavaja(navaja,usosnavaja)
+            funciones.ataquenavaja(navaja=navaja,usosnavaja=usosnavaja)
             if saludmaxima<150:
              saludmaxima=saludmaxima+50
              salud=saludmaxima
         elif respuesta=="ahuyentar":
-            funciones.ahuyentar(bengala)
+            funciones.ahuyentar(bengala=bengala)
         else:
-            funciones.dejarsemorir(salud,saludmaxima)
+            funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
       elif enemigo==2:
         print(" Ves a otro humano, pero este te empieza a atacar","\n","es un cazador, pero no esta bien de la cabeza","\n"," ¿Que vas a hacer?")
         print(" -Huir","\n"," -Esconderte")
@@ -307,17 +317,17 @@ while horasjugadas!=horas and salud>0:
             respuesta==input()
             respuesta=respuesta.lower()
             if respuesta=="usar hacha":
-                funciones.ataquehacha(hacha,usoshacha)
+                funciones.ataquehacha(hacha=hacha,usoshacha=usoshacha)
             elif respuesta=="usar navaja":
-                funciones.ataquenavaja(navaja,usosnavaja)
+                funciones.ataquenavaja(navaja=navaja,usosnavaja=usosnavaja)
             else:
                 print(" haz escapado de la situacion con exito")
         elif respuesta=="arrojar lanza":
-            funciones.ataquelanza(lanza,usoslanza)
+            funciones.ataquelanza(lanza=lanza,usoslanza=usoslanza)
         elif respuesta=="ahuyentarlo":
-            funciones.ahuyentar(bengala)
+            funciones.ahuyentar(bengala=bengala)
         else:
-            funciones.dejarsemorir(salud,saludmaxima)
+            funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
       elif enemigo==3:
         print(" Oh no, el arbol cobro vida","\n"," ¿Que vas a hacer?","\n"," -Forcejear")
         if hacha==1:
@@ -333,7 +343,7 @@ while horasjugadas!=horas and salud>0:
                 lesion=lesion+1
                 efectolesion=efectolesion+5
         elif respuesta=="talar" and hacha==1:
-            funciones.ataquehacha(hacha,usoshacha)
+            funciones.ataquehacha(hacha=hacha,usoshacha=usoshacha)
         else:
             print(" Dejaste que el arbol hiciera lo que quisiera contigo","\n")
             lesion=lesion+1
@@ -368,22 +378,22 @@ while horasjugadas!=horas and salud>0:
                 respuesta=input()
                 respuesta=respuesta.lower()
                 if respuesta=="ahuyentarlo" and bengala==1:
-                    funciones.ahuyentar(bengala)
+                    funciones.ahuyentar(bengala=bengala)
                 elif respuesta=="atacar con lanza" and lanza==1:
-                    funciones.ataquelanza(lanza,usoslanza)
+                    funciones.ataquelanza(lanza=lanza,usoslanza=usoslanza)
                     if saludmaxima!=130 or saludmaxima!=180:
                         saludmaxima=saludmaxima+30
                 elif respuesta=="atacar con hacha" and hacha==1:
-                    funciones.ataquehacha(hacha,usoshacha)
+                    funciones.ataquehacha(hacha=hacha,usoshacha=usoshacha)
                     if saludmaxima!=130 or saludmaxima!=180:
                         saludmaxima=saludmaxima+30
                 elif respuesta=="atacar con navaja" and navaja==1:
                     print(" Usaste su piel para el frio")
-                    funciones.ataquelanza(lanza,usoslanza)
+                    funciones.ataquenavaja(navaja=navaja,usosnavaja=usosnavaja)
                     if saludmaxima!=130 or saludmaxima!=180:
                         saludmaxima=saludmaxima+30
                 else:
-                    funciones.dejarsemorir(salud,saludmaxima)
+                    funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
         elif respuesta=="alejarte":
             print("Haz intetado escapar, pero el lobo te salto encima","\n"," ¿Que haras al respecto?")
             if bengala==1:
@@ -397,39 +407,39 @@ while horasjugadas!=horas and salud>0:
             respuesta=input()
             respuesta=respuesta.lower()
             if respuesta=="ahuyentarlo" and bengala==1:
-                funciones.ahuyentar(bengala)
+                funciones.ahuyentar(bengala=bengala)
             elif respuesta=="atacar con lanza" and lanza==1:
-                funciones.ataquelanza(lanza,usoslanza)
+                funciones.ataquelanza(lanza=lanza,usoslanza=usoslanza)
                 if saludmaxima!=130 or saludmaxima!=180:
                     saludmaxima=saludmaxima+30
             elif respuesta=="atacar con hacha" and hacha==1:
-                funciones.ataquehacha(hacha,usoshacha)
+                funciones.ataquehacha(hacha=hacha,usoshacha=usoshacha)
                 if saludmaxima!=130 or saludmaxima!=180:
                     saludmaxima=saludmaxima+30
             elif respuesta=="atacar con navaja" and navaja==1:
                 print(" Usaste su piel para el frio")
-                funciones.ataquelanza(lanza,usoslanza)
+                funciones.ataquenavaja(navaja=navaja,usosnavaja=usosnavaja)
                 if saludmaxima!=130 or saludmaxima!=180:
                     saludmaxima=saludmaxima+30
             else:
-                funciones.dejarsemorir(salud,saludmaxima)
+                funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
         elif respuesta=="ahuyentarlo" and bengala==1:
-                funciones.ahuyentar(bengala)
+                funciones.ahuyentar(bengala=bengala)
         elif respuesta=="atacar con lanza" and lanza==1:
-            funciones.ataquelanza(lanza,usoslanza)
+            funciones.ataquelanza(lanza=lanza,usoslanza=usoslanza)
             if saludmaxima!=130 or saludmaxima!=180:
                 saludmaxima=saludmaxima+30
         elif respuesta=="atacar con hacha" and hacha==1:
-            funciones.ataquehacha(hacha,usoshacha)
+            funciones.ataquehacha(hacha=hacha,usoshacha=usoshacha)
             if saludmaxima!=130 or saludmaxima!=180:
                 saludmaxima=saludmaxima+30
         elif respuesta=="atacar con navaja" and navaja==1:
             print(" Usaste su piel para el frio")
-            funciones.ataquelanza(lanza,usoslanza)
+            funciones.ataquenavaja(navaja=navaja,usosnavaja=usosnavaja)
             if saludmaxima!=130 or saludmaxima!=180:
                 saludmaxima=saludmaxima+30
         else:
-            funciones.dejarsemorir(salud,saludmaxima)
+            funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
       elif enemigo==5 and horasjugadas>=20:
         print(" Una ola de frio ha aparecido")
         if fogata==1:
@@ -443,7 +453,7 @@ while horasjugadas!=horas and salud>0:
             if palos<0:
                 palos=0
         else:
-            funciones.dejarsemorir(salud,saludmaxima)
+            funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
       else:
         print(" Creiste que habia pasado algo raro, pero nada mas alejado de la verdad")
      if horasjugadas>100:
@@ -461,10 +471,15 @@ while horasjugadas!=horas and salud>0:
         lesion=0
      salud=salud-10
      horasjugadas=horasjugadas+1
-if horasjugadas==horas:
-    print(" Felicidades, te rescataron, ahora eres libre de ese bosque")
-elif salud<=0:
-    print(" Usted ha muerto")
-else:
-    print(" A duras penas llegaste al final, los rescatistas te salvaron de la muerte por milesimas")
-
+  if horasjugadas==horas:
+    print(" Felicidades, te rescataron, ahora eres libre de ese bosque.")
+  elif horasjugadas==horas and refugio==1:
+    print(" Decidiste quedarte en el bosque a pesar de que ya llego el rescate, disfruta tu nueva vida.")
+  elif salud<=0:
+    print(" Usted ha muerto.")
+  else:
+    print(" A duras penas llegaste al final, los rescatistas te salvaron de la muerte por milesimas.")
+ elif eleccion=="ver instrucciones":
+     print("Para jugar:","\n","Ejecutar en python","\n","Construcciones:","\n","Hacha: 2 piedras, 1 palo, 2 lianas","\n","Lanza: 1 piedra, 2 palos, 2 lianas","\n","fogata: 8 piedras, 5 palos","\n","refugio: 10 palos, 20 hojas","\n","disfrute del juego")
+ elif eleccion=="salir":
+     jugar=0
