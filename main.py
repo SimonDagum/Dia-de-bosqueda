@@ -480,6 +480,7 @@ while jugar>0:
   else:
     print(" A duras penas llegaste al final, los rescatistas te salvaron de la muerte por milesimas.")
  elif eleccion=="ver instrucciones":
-     print("Para jugar:","\n","Ejecutar en python","\n","Construcciones:","\n","Hacha: 2 piedras, 1 palo, 2 lianas","\n","Lanza: 1 piedra, 2 palos, 2 lianas","\n","fogata: 8 piedras, 5 palos","\n","refugio: 10 palos, 20 hojas","\n","disfrute del juego")
+     file=open("C:\Users\Usuario\.vscode\python\Manual.txt","r")
+     print(file.readlines())
  elif eleccion=="salir":
      jugar=0
