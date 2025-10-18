@@ -481,6 +481,10 @@ while jugar>0:
     print(" A duras penas llegaste al final, los rescatistas te salvaron de la muerte por milesimas.")
  elif eleccion=="ver instrucciones":
      file=open("C:\Users\Usuario\.vscode\python\Manual.txt","r")
-     print(file.readlines())
+     C=1
+     while C<=14:
+      print(file.readline())
+      C=C+1
+     file.close()
  elif eleccion=="salir":
      jugar=0
