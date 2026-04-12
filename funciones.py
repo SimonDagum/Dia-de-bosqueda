@@ -21,6 +21,15 @@ def ahuyentar(bengala):
     bengala=bengala-bengala
 def dejarsemorir (salud,saludmaxima):
     print(" Debido a tus pobres instintos de supervivencia, dejaste que el enemigo tumbara tu cuerpo")
+    salud=saludmaxima
     salud=salud-saludmaxima
-            salud=salud-saludmaxima
-
+def pieldeoso(salud,saludmaxima):
+    if saludmaxima<150:
+             saludmaxima=saludmaxima+50
+             salud=saludmaxima
+             print(" Tu salud actual paso a subir hasta",salud)
+def pieldelobo(salud,saludmaxima):
+     if saludmaxima!=130 and saludmaxima!=180:
+             saludmaxima=saludmaxima+30
+             salud=saludmaxima
+             print(" Tu salud actual paso a subir hasta",salud)
