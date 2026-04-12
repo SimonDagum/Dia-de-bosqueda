@@ -272,21 +272,15 @@ while jugar>0:
         elif respuesta=="atacar con lanza":
             print(" Te pusiste su piel encima")
             funciones.ataquelanza(lanza=lanza,usoslanza=usoslanza)
-            if saludmaxima<150:
-             saludmaxima=saludmaxima+50
-             salud=saludmaxima
+            funciones.pieldeoso(salud=salud,saludmaxima=saludmaxima)
         elif respuesta=="atacar con hacha":
             print(" Te pusiste su piel encima")
             funciones.ataquehacha(hacha=hacha,usoshacha=usoshacha)
-            if saludmaxima<150:
-             saludmaxima=saludmaxima+50
-             salud=saludmaxima
+            funciones.pieldeoso(salud=salud,saludmaxima=saludmaxima)
         elif respuesta=="atacar con navaja":
             print(" Te pusiste su piel encima")
             funciones.ataquenavaja(navaja=navaja,usosnavaja=usosnavaja)
-            if saludmaxima<150:
-             saludmaxima=saludmaxima+50
-             salud=saludmaxima
+            funciones.pieldeoso(salud=salud,saludmaxima=saludmaxima)
         elif respuesta=="ahuyentar":
             funciones.ahuyentar(bengala=bengala)
         else:
@@ -381,17 +375,14 @@ while jugar>0:
                     funciones.ahuyentar(bengala=bengala)
                 elif respuesta=="atacar con lanza" and lanza==1:
                     funciones.ataquelanza(lanza=lanza,usoslanza=usoslanza)
-                    if saludmaxima!=130 or saludmaxima!=180:
-                        saludmaxima=saludmaxima+30
+                    funciones.pieldelobo(salud=salud,saludmaxima=saludmaxima)
                 elif respuesta=="atacar con hacha" and hacha==1:
                     funciones.ataquehacha(hacha=hacha,usoshacha=usoshacha)
-                    if saludmaxima!=130 or saludmaxima!=180:
-                        saludmaxima=saludmaxima+30
+                    funciones.pieldelobo(salud=salud,saludmaxima=saludmaxima)
                 elif respuesta=="atacar con navaja" and navaja==1:
                     print(" Usaste su piel para el frio")
                     funciones.ataquenavaja(navaja=navaja,usosnavaja=usosnavaja)
-                    if saludmaxima!=130 or saludmaxima!=180:
-                        saludmaxima=saludmaxima+30
+                    funciones.pieldelobo(salud=salud,saludmaxima=saludmaxima)
                 else:
                     funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
         elif respuesta=="alejarte":
@@ -410,34 +401,28 @@ while jugar>0:
                 funciones.ahuyentar(bengala=bengala)
             elif respuesta=="atacar con lanza" and lanza==1:
                 funciones.ataquelanza(lanza=lanza,usoslanza=usoslanza)
-                if saludmaxima!=130 or saludmaxima!=180:
-                    saludmaxima=saludmaxima+30
+                funciones.pieldelobo(salud=salud,saludmaxima=saludmaxima)
             elif respuesta=="atacar con hacha" and hacha==1:
                 funciones.ataquehacha(hacha=hacha,usoshacha=usoshacha)
-                if saludmaxima!=130 or saludmaxima!=180:
-                    saludmaxima=saludmaxima+30
+                funciones.pieldelobo(salud=salud,saludmaxima=saludmaxima)
             elif respuesta=="atacar con navaja" and navaja==1:
                 print(" Usaste su piel para el frio")
                 funciones.ataquenavaja(navaja=navaja,usosnavaja=usosnavaja)
-                if saludmaxima!=130 or saludmaxima!=180:
-                    saludmaxima=saludmaxima+30
+                funciones.pieldelobo(salud=salud,saludmaxima=saludmaxima)
             else:
                 funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
         elif respuesta=="ahuyentarlo" and bengala==1:
                 funciones.ahuyentar(bengala=bengala)
         elif respuesta=="atacar con lanza" and lanza==1:
             funciones.ataquelanza(lanza=lanza,usoslanza=usoslanza)
-            if saludmaxima!=130 or saludmaxima!=180:
-                saludmaxima=saludmaxima+30
+            funciones.pieldelobo(salud=salud,saludmaxima=saludmaxima)
         elif respuesta=="atacar con hacha" and hacha==1:
             funciones.ataquehacha(hacha=hacha,usoshacha=usoshacha)
-            if saludmaxima!=130 or saludmaxima!=180:
-                saludmaxima=saludmaxima+30
+            funciones.pieldelobo(salud=salud,saludmaxima=saludmaxima)
         elif respuesta=="atacar con navaja" and navaja==1:
             print(" Usaste su piel para el frio")
             funciones.ataquenavaja(navaja=navaja,usosnavaja=usosnavaja)
-            if saludmaxima!=130 or saludmaxima!=180:
-                saludmaxima=saludmaxima+30
+            funciones.pieldelobo(salud=salud,saludmaxima=saludmaxima)
         else:
             funciones.dejarsemorir(salud=salud,saludmaxima=saludmaxima)
       elif enemigo==5 and horasjugadas>=20:
@@ -480,11 +465,12 @@ while jugar>0:
   else:
     print(" A duras penas llegaste al final, los rescatistas te salvaron de la muerte por milesimas.")
  elif eleccion=="ver instrucciones":
-     file=open("C:\Users\Usuario\.vscode\python\Manual.txt","r")
+     file=open("Manualdiadebo.txt","r")
      C=1
      while C<=14:
       print(file.readline())
       C=C+1
+     x=input("presione cualquier tecla para salir")
      file.close()
  elif eleccion=="salir":
      jugar=0
