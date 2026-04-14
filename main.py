@@ -295,7 +295,7 @@ while jugar>0:
         respuesta=input()
         respuesta=respuesta.lower()
         if respuesta=="huir":
-            suerte=random.randint
+            suerte=random.randint(1,20)
             if suerte>10:
                 print(" Trataste de escapar, pero el cazador te pego un disparo a la cabeza")
                 salud=salud-salud
